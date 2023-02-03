@@ -1,0 +1,18 @@
+.select {
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  border: 2px solid #7d7d7c;
+  border-radius: 50px;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+  font-family: "GothamNarrow-Medium";
+  line-height: normal;
+  color: #272c30;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

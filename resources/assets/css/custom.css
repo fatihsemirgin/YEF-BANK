@@ -1,0 +1,11 @@
+footer {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9fafe !important;
+}
+html {
+  background-color: #f9fafe;
+}

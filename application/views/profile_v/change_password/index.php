@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <?php $this->load->view("includes/head") ?>
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+    
+        <?php $this->load->view("includes/sidebar") ?>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Top-bar -->
+
+                <!-- End of Top-bar -->
+                <?php $this->load->view("includes/top-bar") ?>
+                <?php
+                if(isset($change_password )){
+                    if ($change_password == 1) {
+                        // echo 'GIRDIII';
+                        echo "<script>
+                        Swal.fire({
+                            icon : 'success',
+                            title: '<i>Changing Password</i>', 
+                            text: 'The password has been successfully changed.',  
+                        });
+                        </script>";
+                    }else if($change_password == -1){
+                        echo "<script>
+                        Swal.fire({
+                            icon : 'error',
+                            title: '<i>Wrong Password</i>', 
+                            html: '<span>Please Enter Correct Available Password.</span>',  
+                        });
+                        </script>";
+                    }
+                }    
+                ; ?>
+
+                <!-- Begin Page Content -->
+                <?php $this->load->view("{$view_folder}/{$sub_view_folder}/change_p_v") ?>
+
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+            <?php $this->load->view("includes/footer") ?>
+            <!-- Footer -->
+
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- JavaScript -->
+    <?php $this->load->view("includes/include_script") ?>
+
+</body>
+
+</html>
